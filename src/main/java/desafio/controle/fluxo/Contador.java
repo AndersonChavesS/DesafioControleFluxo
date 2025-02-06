@@ -6,7 +6,6 @@ public class Contador {
     public static void main(String[] args) {
         Scanner terminal = new Scanner(System.in);
 
-        // Solicita os parâmetros ao usuário
         System.out.println("Digite o primeiro parâmetro:");
         int parametroUm = terminal.nextInt();
 
@@ -14,13 +13,11 @@ public class Contador {
         int parametroDois = terminal.nextInt();
 
         try {
-            // Chama o método contendo a lógica de contagem
             contar(parametroUm, parametroDois);
-        } catch (ParametrosInvalidosException exception) {
-            // Captura e imprime a mensagem de exceção
+        } catch (ParametrosInvalidosException exception) {       
             System.out.println(exception.getMessage());
         } finally {
-            terminal.close(); // Fecha o Scanner para evitar vazamentos de recursos
+            terminal.close(); 
         }
     }
 
